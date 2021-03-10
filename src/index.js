@@ -35,5 +35,19 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-  return 0;
+  if(!array || array.length <= 0)
+  {
+    return 0;
+  }
+
+  let average = 0;
+
+  for(let i = 0; i < array.length; i++)
+  {
+     average += array[i];
+  }
+
+  let result = average / array.length;
+
+  return result;
 }
