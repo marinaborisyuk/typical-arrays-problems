@@ -1,6 +1,19 @@
 
 exports.min = function min (array) {
-  return 0;
+
+  if(!array || array.length <= 0)
+  {
+    return 0;
+  }
+    let minElement = array[0];
+    for(let i = 0; i <= array.length; i++)
+    {
+      if(minElement > array[i])
+      {
+        minElement = array[i];
+      }
+    }
+    return minElement;
 }
 
 exports.max = function max (array) {
